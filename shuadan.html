@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: SimSun;
+        }
+        table{/*为页面中所有的table标签添加样式*/
+            width: 900px;/*设置table宽度*/
+            margin: auto;/*让表格居中显示*/
+            border: black 1px  solid;/*添加边框*/
+            border-spacing: 0px;/*去掉table标签及其子标签边框之间的白色空隙*/
+            border-collapse: collapse;
+            
+        }
+
+        th{/*为页面中所有的th标签添加样式*/
+            border: black 1px  solid;/*添加边框*/
+            background-color: #508af7;
+        }
+        td{/*为页面中所有的td标签添加样式*/
+            border: black 1px  solid;/*添加边框*/
+        }
+        
+    </style>
+
+    <script src="template.js"></script>
+    <script type="text/html" id="form">
+        <tr>
+            <td>{{ITEM_ID}}</td>
+            <td>{{ITEM_NAME}}</td>
+            <td>{{DATE}}</td>
+        </tr>
+    </script>
+
+</head>
+<body>
+    <div>
+        <h2 style="text-align: center;">刷单商品</h2>
+        <table border="1" id="da">
+            <tr>
+                <th>id</th>
+                <th>商品名称</th>
+                <th>月份</th>
+            </tr>
+            <!-- <tr>
+                <td>{{ITEM_ID}}</td>
+                <td>{{ITEM_NAME}}</td>
+                <td>{{DATE}}</td>
+            </tr> -->
+        </table>
+    </div>
+</body>
+<script>
+    url="shuadan.json";
+    var request1=new XMLHttpRequest();
+    request1.open("get",url);
+    request1.send(null);
+    request1.onload=function(){
+        if(request1.status==200){
+            data=JSON.parse(request1.responseText);  //request.responseText
+            /* console.log(data); */
+            for(var i=0;i<data.length;i++){
+                var res=template("form",data[i]);
+                /* console.log(res); */
+                document.getElementById("da").innerHTML+=res;
+                // center.innerHTML+=res;
+            }
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #F1F4F9;
+            display: flex;
+            width: 100%;
+        }
+        #right{
+          width: 25%;
+          height: 800px;
+          margin: auto;
+        }
+        .leftbox{
+            width: 98%;
+            height:800px;
+            margin: 30 auto 0 auto;
+        }
+        .firstrow{
+            width: 100%;
+            height: 18%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .firstrowbox{
+            width: 32%;
+            height: 100%;
+            background-color: #ffffff;
+            display: flex;
+            box-shadow: 2px 2px 10px #909090;
+            border-radius: 8px;
+        }
+        .secondrow{
+            margin-top: 20px;
+            width: 100%;
+            height: 38%;
+            background-color: #ffffff;
+            box-shadow: 2px 2px 10px #909090;
+            border-radius: 8px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .thirdrow{
+            margin-top: 20px;
+            display: flex;
+            width: 100%;
+            height: 42%;
+        }
+        .image{
+          width: 98%;
+          height:45%;
+          margin: 14% auto;
+        }
+        .image img{
+          width: 100%;
+          height: 100%;
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="leftbox" id="center">
+        <div class="firstrow">
+            <div class="firstrowbox">
+                <div style="width: 30%;margin: auto 30px auto 30px;">
+                    <img style="width: 85%;height: auto" src="img/购物.png");>
+                </div>
+                <div style="height:70%;margin:auto 0;" >
+                    <div style="font-size: 40px;color: #848484;margin-bottom: 10%;">1593729</div>
+                    <div style="font-size: 15px; color:#BFBFC1;margin-bottom: 15%;">异常商品</div>
+                    <div style="font-size:12px; margin-bottom: 15%;">
+                        <!-- <a href="#/commodity" style=" color: #16CA92; text-decoration:none">点击查看</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="firstrowbox">
+                <div style="width: 30%;margin: auto 30px auto 30px;">
+                    <img style="width: 85%;height: auto" src="img/订单.png");>
+                </div>
+                <div style="height:70%;margin:auto 0;" >
+                    <div style="font-size: 40px;color: #848484;margin-bottom: 10%;">160332</div>
+                    <div style="font-size: 15px; color:#BFBFC1;margin-bottom: 15%;">刷单总数</div>
+                    <div style="margin-top: -10px;">
+                      <a style="font-size:12px; color: #16CA92;text-decoration: none;" href="shuadan.html"  target="_blank">点击查看</a>
+                    </div>
+                </div>
+            </div>
+            <div class="firstrowbox">
+                <div style="width: 30%;margin: auto 30px auto 30px;">
+                    <img style="width: 85%;height: auto" src="img/运行.png");>
+                </div>
+                <div style="height:70%;margin:auto 0;" >
+                    <div style="font-size: 40px;color: #848484;margin-bottom: 10%;">1433397</div>
+                    <div style="font-size: 15px; color:#BFBFC1;margin-bottom: 15%;">虚标价格总数</div>
+                    <div style="margin-top: -14px;">
+                      <a style="font-size:12px; color: #16CA92;text-decoration: none;" href="xubiao.html" target="_blank">点击查看</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="secondrow">
+            <div style="width:100%; height:10%; display: flex;margin-left: 25px;margin-right: 10px;">
+                <div style="width: 3%;">
+                    <img style="width: 100%;" src="img/数据.png"/> 
+                </div>
+                <div style="font-size: 15px;margin: auto 10px;color: #848484;">异常商品数目</div>
+            </div>
+            
+
+          <div style="width: 100%;height: 90%;margin: 5px auto 0 auto; display: flex;">
+            <div id="number1" style="width:31%;height:100%;margin:5px auto 0 auto;"></div>
+
+            <div id="number2" style="width:31%;height:100%;margin:5px auto 0 auto;"></div>
+
+            <div id="number3" style="width:31%;height:100%;margin:5px auto 0 auto;"></div>
+          </div>
+
+        </div>
+
+        <div class="thirdrow">
+            <div style="width: 32%; height:100%; background-color: #ffffff;box-shadow: 2px 2px 10px #909090; border-radius: 8px;">
+               <div style="height: 18%;width: 100%;display: flex;">
+                <div style="width: 10%;margin: 15px 4px 0 20px;">
+                    <img style="width: 100%;" src="img/饼图.png"/> 
+                </div>
+                <div style="font-size: 15px;margin:auto 8px;color: #848484;">异常商品所占比例</div>
+               </div>
+               <div id="ratio1" style="height:80%;width:98%;margin:2px auto 0 auto"></div>
+            </div>
+
+            <div style="width: 66%; height: 100%; margin-left: 2%; background-color: #ffffff; box-shadow: 2px 2px 10px #909090; border-radius: 8px;">
+                <div style="height: 18%;width:100%;display: flex;">
+                    <div style="width: 5%;margin: 15px 4px 0 20px;">
+                        <img style="width: 100%;" src="img/经济.png"/> 
+                    </div>
+                    <div style="font-size: 15px;margin:auto 8px;color: #848484;">异常商品类别占比</div>
+                </div>
+                <div id="ratio2" style="height:80%;width:98%;margin:2px auto 0 auto"></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- <div id="right">
+      <div class="image">
+        <img src="img/价格.png">
+        <div style="color:#848484;margin:auto;font-size:18px;width:108px">价格聚类结果</div>
+      </div>
+      <div class="image">
+        <img src="img/销量.png">
+        <div style="color:#848484;margin:auto;font-size:18px;width:108px">销量聚类结果</div>
+      </div>
+    </div> -->
+</body>
+<script src="echarts.js"></script>
+<script>
+
+// window.onload=function(){
+// 	var routeView=null;  //路由视图
+// 	window.addEventListener('hashchange',function(){  //监听路由变化
+// 		var routeView=document.getElementById("center");
+// 		switch(location.hash){  //判断路由
+// 			case '#/commodity':
+// 				add(0);
+// 				break;
+// 			case '#/store':
+// 				add(1);
+// 				break;
+//             case '#/record':
+//                 add(2);
+// 			default:
+// 				return;
+// 		}
+// 	})
+// }
+
+// var url="json/blog.json";
+// var request=new XMLHttpRequest();
+// request.open("get",url);
+// request.send(null);
+// request.onload=function(){
+// 	if(request.status==200){
+// 		var data=JSON.parse(request.responseText);  //request.responseText
+// 		for(var i=0;i<data.length;i++){
+// 			var res=template("blog_template",data[i]);
+// 			document.getElementById("center").innerHTML+=res;
+// 		}
+// 	}
+// }
+
+// function add(i){  //获取详情页内容
+// 	var url="json/detail.json";
+// 	var request=new XMLHttpRequest();
+// 	request.open("get",url);
+// 	request.send(null);
+// 	request.onload=function(){
+		
+// 		console.log("12");
+// 		if(request.status==200){
+// 			var data=JSON.parse(request.responseText);
+// 			var res=template("detail_template",data[i]);
+// 			document.getElementById('center').innerHTML=res;
+// 		}
+// 	}
+// }
+
+var numberChart1 = echarts.init(document.getElementById('number1'));
+var numberChart2 = echarts.init(document.getElementById('number2'));
+var numberChart3 = echarts.init(document.getElementById('number3'));
+var ratioChart1 = echarts.init(document.getElementById('ratio1'));
+var ratioChart2 = echarts.init(document.getElementById('ratio2'));
+
+// 指定图表的配置项和数据
+var option4 = {
+  legend:{
+    // icon:'rect',
+    // orient: 'vertical',
+    // top: 'center',
+    // left: "right", 
+    // top: "top", 
+    // itemWidth: 30, 
+    // itemHeight: 16.8, 
+    data:['刷单商品数目'],
+    left:'right'
+    // textStyle: {
+    //   fontSize: 12,
+    //   color: '#666'
+    //   }
+  },
+  xAxis: {
+    data: ['6月','7月','8月','9月']
+  },
+  yAxis:{
+    type:'value'
+  },
+  grid:{
+    left:55
+  },
+  tooltip: {
+    trigger: 'axis'   // axis   item   none三个值
+  },
+  series: [
+    {
+      name: '刷单商品数目',
+      data: [89636,23871,11537,35288],
+      type: 'line',
+      emphasis:{
+          label:{
+              show:true
+          }
+      },
+      smooth:true
+    },
+  ]
+};
+
+var option1 = {
+  legend:{
+    // icon:'rect',
+    // orient: 'vertical',
+    // top: 'center',
+    // left: "right", 
+    // top: "top", 
+    // itemWidth: 30, 
+    // itemHeight: 16.8, 
+    data:['虚标商品数目'],
+    left:'right'
+    // textStyle: {
+    //   fontSize: 12,
+    //   color: '#666'
+    //   }
+  },
+  xAxis: {
+    data: ['6月','7月','8月','9月']
+  },
+  yAxis:{
+    type:'value'
+  },
+  grid:{
+    left:55
+  },
+  tooltip: {
+    trigger: 'axis'   // axis   item   none三个值
+  },
+  series: [
+    {
+      name:'虚标商品数目',
+      data: [519445,433521,467779,433652],
+      type: 'line',
+      emphasis:{
+          label:{
+              show:true
+          }
+      },
+      smooth:true
+    }
+  ]
+};
+
+var option5 = {
+  legend:{
+    // icon:'rect',
+    // orient: 'vertical',
+    // top: 'center',
+    // left: "right", 
+    // top: "top", 
+    // itemWidth: 30, 
+    // itemHeight: 16.8, 
+    data:['异常商品数目','异常商品数目占比'],
+    left:'right'
+    // textStyle: {
+    //   fontSize: 12,
+    //   color: '#666'
+    //   }
+  },
+  xAxis: {
+    data: ['6月','7月','8月','9月']
+  },
+  yAxis:{
+    type:'value'
+  },
+  tooltip: {
+    trigger: 'axis'   // axis   item   none三个值
+  },
+  series: [
+    {
+      name: '异常商品数目占比',
+      data: [609081/4501729,457392/4132042,479316/4132042,468940/4411596],
+      type: 'line',
+      emphasis:{
+          label:{
+              show:true
+          }
+      },
+      smooth:true
+    }
+  ]
+};
+
+var option2 = {
+  title: {
+    text: '',
+    left: 'center',
+    top: 'center'
+  },
+  series: [
+    {
+      type: 'pie',
+      data: [
+        {
+          value: 4501729,
+          name: '6月'
+        },
+        {
+          value: 4132042,
+          name: '7月'
+        },
+        {
+          value: 4285341,
+          name: '8月'
+        },
+        {
+          value:4411596,
+          name: '9月'
+        }
+      ],
+      radius: ['40%', '70%']
+    }
+  ]
+};
+
+var option3 = {
+  xAxis: {
+    data: ['服装鞋包', '百货食品', '母婴用品', '家居建材', '美妆饰品', '文化玩乐', '手机数码','运动户外','家用电器','生活服务','汽配摩托','盒马','游戏话费','其他'],
+    axisLabel:{
+      textStyle:{
+        fontSize:'8'
+      },
+      interval:0
+    }
+  },
+  yAxis: {},
+  series: [
+    {
+      type: 'bar',
+      data: [4745,4367,2749,2043,1675,1375,1214,1055,534,493,466,284,132,1145]
+    }
+  ]
+};
+
+// 使用刚指定的配置项和数据显示图表。
+numberChart1.setOption(option1);
+numberChart2.setOption(option4);
+numberChart3.setOption(option5);
+ratioChart1.setOption(option2);
+ratioChart2.setOption(option3);
+
+
+</script>
+</html>
